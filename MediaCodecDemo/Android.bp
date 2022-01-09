@@ -1,0 +1,41 @@
+cc_binary {
+    name: "mc_demo",
+
+    srcs: [
+        "MediaCodecDemo.cpp",
+    ],
+
+    header_libs: [
+        "libmediadrm_headers",
+        "libmediametrics_headers",
+    ],
+
+    shared_libs: [
+        "libstagefright",
+        "libmedia",
+        "libmediandk",
+        "libmedia_omx",
+        "libutils",
+        "libbinder",
+        "libstagefright_foundation",
+        "libgui",
+        "libcutils",
+        "liblog",
+    ],
+
+    include_dirs: [
+        "frameworks/av/media/libstagefright",
+        "frameworks/av/media/libstagefright/include",
+        "frameworks/native/include/media/openmax",
+    ],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wno-multichar",
+        "-Wno-unused-function",
+        "-Wno-unused-const-variable",
+        "-Wno-unused-variable",
+        //"-UNDEBUG",
+    ]
+}
